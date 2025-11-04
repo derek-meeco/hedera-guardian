@@ -6,6 +6,8 @@ on:
 jobs:
   buildAndTest:
     name: Build and Test
+    # Only run on oringal repository
+    if: github.repository == 'hashgraph/guardian'
     runs-on: guardian-linux-medium
     services:
       cache:
